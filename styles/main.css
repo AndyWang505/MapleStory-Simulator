@@ -1,0 +1,237 @@
+body{
+    cursor: url("../doc/images/cursor/cursor.png") -3 3, auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+span{
+    display: block;
+}
+.select span{
+    padding: 6px 5px;
+    border-radius: 4px;
+    border: 0.5px solid #111111;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top, #333333, #444444, #555555);
+    color: white;
+    position: relative;
+    font-size: 16px;
+}
+.select i{
+    font-size: 10px;
+    color: #BBBBBB;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+.option{
+    display: block;
+    width: 100%;
+    padding: 2px 5px;
+    text-align: left;
+    background-color: #444444;
+    border: 0;
+    color: #777777;
+}
+.option:hover{
+    box-shadow: 0 0 10px 100px #222222 inset;
+    color: white;
+}
+.select{
+    position: relative;
+}
+.dropdown_open{
+    width: 100%;
+    border: 1px solid #777777;
+    display: none;
+    position: absolute;
+    left: 0;
+}
+.wrap{
+    margin: 0 auto;
+    background-image: url("../doc/images/bg/bg2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.main{
+    height: 97vh;
+    position: relative;
+}
+.footer{
+    height: 3vh;
+    background-color: #DEAA63;
+}
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    padding: 20px 25px 10px 25px;
+    background-color: #333333;
+}
+.sidebar h2{
+    color: #EEEEEE;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.equip_col{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 85vh;
+    margin: 10px auto;
+    align-content: flex-start;
+    overflow-y: auto;
+    /* -webkit-overflow-scrolling: touch; */
+}
+.equip_col::-webkit-scrollbar{
+    display: none;
+}
+.equip_item{
+    margin: 5px;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background-color: #BEC7C6;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid #9CD7C4;
+}
+.cube_interface{
+    width: 196px;
+    height: 355px;
+}
+.itembag{
+    width: 197px;
+    height: 380px;
+}
+.container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+.dropdown_open:hover{
+    cursor: url("../doc/images/cursor/Cursor.1.0.png") -3 3, pointer !important;
+}
+input:hover{
+    cursor: url("../doc/images/cursor/Cursor.1.0.png") -3 3, pointer !important;
+}
+/* item table */
+.touch{
+    position: fixed;
+    display: none;
+}
+.head{
+    background-image: url("../doc/images/item_table/head.png");
+    background-repeat: no-repeat;
+    width: 261px;
+    height: 230px;
+    display: block;
+}
+.line{
+    background-image: url("../doc/images/item_table/oneline.png");
+    background-repeat: no-repeat;
+    width: 261px;
+    height: 16px;
+    display: block;
+}
+.bottom{
+    background-image: url("../doc/images/item_table/bottom.png");
+    background-repeat: no-repeat;
+    width: 261px;
+    height: 25px;
+    display: block;
+}
+.bottom_add{
+    background-image: url("../doc/images/item_table/bottom.add.png");
+    background-repeat: no-repeat;
+    width: 261px;
+    height: 25px;
+    display: none;
+}
+.table{
+    width: 261px;
+    font-family: Arial, sans-serif !important;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+}
+.table_img{
+    position: absolute;
+    top: 107px;
+    left: 33px;
+    background-image: url("https://maplestory.io/api/TWMS/249/item/1032223/icon");
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(2,2);
+}
+.light{
+    position: absolute;
+    top: 90px;
+    left: 16px;
+    background-image: url("../doc/images/item_table/Item.ItemIcon.cover.png");
+    width: 74px;
+    height: 74px;
+    z-index: 999;
+}
+.cover{
+    position: absolute;
+    top: 87px;
+    left: 13px;
+    background-image: url("../doc/images/item_table/Item.ItemIcon.4.png");
+    width: 90px;
+    height: 80px;
+    z-index: 999;
+}
+.title{
+    margin-top: 15px;
+    width: 261px;
+    text-align: center;
+}
+.title_text{
+    font-size: 16px;
+    font-weight: bold;
+}
+.title_text2{
+    font-size: 14px;
+}
+.lev{
+    position: absolute;
+    top: 131px;
+    left: 157px;
+    color: #FFCC00;
+    font-size: 6px;
+    transform: scale(0.8);
+}
+.attributes, .att_category{
+    padding: 0;
+    font-size: 12px;
+}
+.table_text{
+    font-size: 12px;
+    position: absolute;
+    top: 228px;
+    left: 13px;
+}
+.bottom_center{
+    width: 235px;
+    text-align: center;
+}
+.bottom_center div{
+    padding: 0;
+}
