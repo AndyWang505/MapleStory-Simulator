@@ -17,27 +17,59 @@
         <div class="main">
             <!-- sidebar -->
             <div class="sidebar">
-                <h2 class="sidebar_title">道具分類</h2>
-                <!-- sidebar selector -->
-                <div class="select">
-                    <div class="dropdown">
-                        <span class="selected">整體</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    
-                    <div class="dropdown_open">
-                        <input type="button" class="option" data-value="All" value="整體">
-                        <input type="button" class="option" data-value="Armor" value="防具">
-                        <input type="button" class="option" data-value="Weapon" value="武器">
-                        <input type="button" class="option" data-value="Accessory" value="飾品">
-                        <!-- <li class="option">消耗</li>
-                        <li class="option">特殊</li>
-                        <li class="option">其他</li> -->
+                <div class="sidebar_tab">
+                    <div class="tab tab_active">裝備<img src="https://maplestory.io/api/TWMS/249/item/1472032/icon" alt=""></div>
+                    <div class="tab">消耗<img src="https://maplestory.io/api/TWMS/249/item/2049603/icon" alt=""></div>
+                    <div class="tab">特殊<img src="https://maplestory.io/api/TWMS/249/item/5062017/icon" alt=""></div>
+                </div>
+                <div class="tab_content1">
+                    <!-- sidebar selector -->
+                    <div class="sidebar_content">
+                        <div class="select">
+                            <div class="dropdown">
+                                <span class="selected">整體</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            
+                            <div class="dropdown_open">
+                                <input type="button" class="option" data-value="All" value="整體">
+                                <input type="button" class="option" data-value="Armor" value="防具">
+                                <input type="button" class="option" data-value="Weapon" value="武器">
+                                <input type="button" class="option" data-value="Accessory" value="飾品">
+                            </div>
+                        </div>
+                        <!-- equip col -->
+                        <div class="equip_col">
+                            <!-- items -->
+                        </div>
+                        <div class="sidebar_btn">
+                            <input type="button" value="確定"/>
+                        </div>
                     </div>
                 </div>
-                <!-- equip col -->
-                <div class="equip_col">
-                    <!-- items -->
+                <div class="tab_content2">
+                    <!-- sidebar selector -->
+                    <div class="sidebar_content">
+                        <!-- equip col -->
+                        <div class="equip_col">
+                            <!-- items -->
+                        </div>
+                        <div class="sidebar_btn">
+                            <input type="button" value="確定"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content3">
+                    <!-- sidebar selector -->
+                    <div class="sidebar_content">
+                        <!-- equip col -->
+                        <div class="equip_col">
+                            <!-- items -->
+                        </div>
+                        <div class="sidebar_btn">
+                            <input type="button" value="確定"/>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- container -->
@@ -47,7 +79,32 @@
                     <canvas id="canvas"></canvas>
                 </div>
                 <!-- itembag -->
-                <div class="itembag" draggable="true"></div>
+                <div class="itembag" draggable="true">
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                    <div class="bag_item"></div>
+                </div>
             </div>
             
             
@@ -60,18 +117,7 @@
     <div class="touch">
         <div class="head"></div>
         <div class="touch_content">
-            <!-- <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div> -->
+            <!-- line -->
         </div>
         
         <div class="bottom"></div>
@@ -79,13 +125,21 @@
         <!-- item table -->
         <div class="table">
             <div class="title">
-                <div class="title_text">頂級培羅德耳環</div>
-                <div class="title_text2">(未鑑定)</div>
+                <div class="title_text">null</div>
+                <div class="title_text2">(null)</div>
             </div>
             <div class="table_img"></div>
             <div class="light"></div>
             <div class="cover"></div>
-            <div class="lev">150</div>
+            <div class="lev">0</div>
+            <div class="job">
+                <div class="zero"></div>
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="four"></div>
+                <div class="eight"></div>
+                <div class="sixteen"></div>
+            </div>
             <div class="table_text">
                 <div class="att_category"></div>
                     <!-- <div class="attributes">力量： +15</div>
@@ -98,12 +152,24 @@
                     <div class="attributes">可使用捲軸次數： 7</div>
                     <div class="attributes">最高可強化 25星</div> -->
                 
-
                 <!-- <div class="bottom_center">
                     <div class="attributes">黃金鐵鎚強化次數： 0</div>
                     <div class="attributes">白金鐵鎚強化次數： 0</div>
                 </div> -->
             </div>
+        </div>
+    </div>
+    <div class="other">
+        <div class="other_head"></div>
+        <div class="other_content">
+            <!-- <div class="other_line"></div> -->
+        </div>
+        <div class="other_bottom"></div>
+        <div class="other_table">
+            <div class="other_title"></div>
+            <div class="other_img"></div>
+            <div class="other_light"></div>
+            <div class="other_text"></div>
         </div>
     </div>
     

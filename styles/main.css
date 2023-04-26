@@ -5,49 +5,6 @@ body{
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none;
 }
-span{
-    display: block;
-}
-.select span{
-    padding: 6px 5px;
-    border-radius: 4px;
-    border: 0.5px solid #111111;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(to top, #333333, #444444, #555555);
-    color: white;
-    position: relative;
-    font-size: 16px;
-}
-.select i{
-    font-size: 10px;
-    color: #BBBBBB;
-    position: absolute;
-    top: 8px;
-    right: 10px;
-}
-.option{
-    display: block;
-    width: 100%;
-    padding: 2px 5px;
-    text-align: left;
-    background-color: #444444;
-    border: 0;
-    color: #777777;
-}
-.option:hover{
-    box-shadow: 0 0 10px 100px #222222 inset;
-    color: white;
-}
-.select{
-    position: relative;
-}
-.dropdown_open{
-    width: 100%;
-    border: 1px solid #777777;
-    display: none;
-    position: absolute;
-    left: 0;
-}
 .wrap{
     margin: 0 auto;
     background-image: url("../doc/images/bg/bg2.jpg");
@@ -57,7 +14,55 @@ span{
     width: 100%;
     height: 100vh;
 }
+.select span{
+    display: block;
+    padding: 6px 5px;
+    border-radius: 4px;
+    border: 0.5px solid #111111;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top, #333333, #444444, #555555);
+    color: white;
+    position: relative;
+    font-size: 16px;
+}
+
+.select i{
+    font-size: 10px;
+    color: #BBBBBB;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+.option{
+    display: block;
+    width: 100%;
+    padding: 2px 5px;
+    text-align: left;
+    background-color: #444444;
+    border: 0;
+    color: #777777;
+}
+
+.option:hover{
+    box-shadow: 0 0 10px 100px #222222 inset;
+    color: white;
+}
+
+.select{
+    position: relative;
+}
+
+.dropdown_open{
+    width: 100%;
+    border: 1px solid #777777;
+    display: none;
+    position: absolute;
+    left: 0;
+}
+
 .main{
+    display: flex;
     height: 97vh;
     position: relative;
 }
@@ -66,25 +71,19 @@ span{
     background-color: #DEAA63;
 }
 .sidebar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 350px;
+    width: auto;
     height: 100%;
-    padding: 20px 25px 10px 25px;
+    padding: 10px 15px 10px 15px;
     background-color: #333333;
-}
-.sidebar h2{
-    color: #EEEEEE;
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 16px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .equip_col{
     display: flex;
     flex-wrap: wrap;
     width: 300px;
-    height: 85vh;
+    height: 80vh;
+    padding: 1px 0;
+    background-color: #222222;
     margin: 10px auto;
     align-content: flex-start;
     overflow-y: auto;
@@ -106,6 +105,10 @@ span{
     border-radius: 3px;
     border: 1px solid #9CD7C4;
 }
+.equip_item:hover{
+    margin: 3px 5px 7px 5px;
+    background-color: #d3e0df;
+}
 .cube_interface{
     width: 196px;
     height: 355px;
@@ -113,46 +116,59 @@ span{
 .itembag{
     width: 197px;
     height: 380px;
+    padding: 49px 13px 78px 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bag_item{
+    margin: 4px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .container {
     padding: 30px;
     display: flex;
     justify-content: center;
 }
-.dropdown_open:hover{
-    cursor: url("../doc/images/cursor/Cursor.1.0.png") -3 3, pointer !important;
+.dropdown:hover{
+    cursor: url("../doc/images/cursor/Animated_Cursor.1.gif") -3 3, pointer !important;
 }
-input:hover{
-    cursor: url("../doc/images/cursor/Cursor.1.0.png") -3 3, pointer !important;
+input{
+    cursor: url("../doc/images/cursor/Animated_Cursor.1.gif") -3 3, pointer !important;
 }
 /* item table */
 .touch{
     position: fixed;
     display: none;
+    z-index: 100;
 }
 .head{
-    background-image: url("../doc/images/item_table/head.png");
+    background-image: url("../doc/images/item_table/equip.item/head.png");
     background-repeat: no-repeat;
     width: 261px;
     height: 230px;
     display: block;
 }
 .line{
-    background-image: url("../doc/images/item_table/oneline.png");
+    background-image: url("../doc/images/item_table/equip.item/line.png");
     background-repeat: no-repeat;
     width: 261px;
     height: 16px;
     display: block;
 }
 .bottom{
-    background-image: url("../doc/images/item_table/bottom.png");
+    background-image: url("../doc/images/item_table/equip.item/bottom.png");
     background-repeat: no-repeat;
     width: 261px;
     height: 25px;
     display: block;
 }
 .bottom_add{
-    background-image: url("../doc/images/item_table/bottom.add.png");
+    background-image: url("../doc/images/item_table/equip.item/bottom.add.png");
     background-repeat: no-repeat;
     width: 261px;
     height: 25px;
@@ -171,7 +187,7 @@ input:hover{
     position: absolute;
     top: 107px;
     left: 33px;
-    background-image: url("https://maplestory.io/api/TWMS/249/item/1032223/icon");
+    /* background-image: url("https://maplestory.io/api/TWMS/249/item/1032223/icon"); */
     width: 40px;
     height: 40px;
     z-index: 10;
@@ -193,7 +209,7 @@ input:hover{
     position: absolute;
     top: 87px;
     left: 13px;
-    background-image: url("../doc/images/item_table/Item.ItemIcon.4.png");
+    /* background-image: url("../doc/images/item_table/Item.ItemIcon.4.png"); */
     width: 90px;
     height: 80px;
     z-index: 999;
@@ -234,4 +250,202 @@ input:hover{
 }
 .bottom_center div{
     padding: 0;
+}
+/* .active{
+    margin: 3px 5px 7px 5px;
+    border: 1px solid #94b5f3;
+    background-color: #FFFFFF;
+} */
+.sidebar_content{
+    background-color: #333333;
+    padding: 10px;
+    border: 1px solid #777777;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar_btn{
+    text-align: right;
+    background-image: linear-gradient(to top, #4c637c, #42576d, #38495c, #2c4258);
+    border: 1px solid #57626d;
+    border-radius: 4px;
+}
+.sidebar_btn input{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0 0 3px black;
+    padding: 5px 15px 5px 15px;
+    border-radius: 4px;
+    border: 0.5px solid #111111;
+    background-image: linear-gradient(to top, #779900, #99BB22,#99CC22, #CCDD44);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar_btn input:hover{
+    text-shadow: 0px 0px 0 #f1eade;
+    background-image: linear-gradient(to top, #8eb404, #acd127,#aae227, #d8eb48);
+}
+.sidebar_tab{
+    display: flex;
+    margin: 5px 0 0 0;
+}
+.tab{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top, #333333, #444444, #555555);
+    color: #FFFFFF;
+    width: 31%;
+    margin: auto;
+    padding: 3px;
+    border-radius: 6px 6px 0 0;
+    border-top: 1px solid #777777;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
+}
+.tab_active{
+    background-color: #227788;
+    background-image: linear-gradient(to top, #115566, #116677, #117788, #2288AA);
+    border-top: 1px solid #33CCDD;
+    border-left: 1px solid #33CCDD;
+    border-right: 1px solid #33CCDD;
+}
+.tab:hover{
+    cursor: url("../doc/images/cursor/Animated_Cursor.1.gif") -3 3, pointer !important;
+}
+.tab img{
+    pointer-events: none;
+}
+.tab_content1{
+    display: block;
+}
+.tab_content2{
+    display: none;
+}
+.tab_content3{
+    display: none;
+}
+/* -------other-------- */
+.other{
+    position: fixed;
+    display: none;
+    z-index: 100;
+}
+.other_head{
+    display: block;
+    background-image: url("../doc/images/item_table/other.item/head.png");
+    width: 290px;
+    height: 113px;
+}
+.other_line{
+    display: block;
+    background-image: url("../doc/images/item_table/other.item/line.png");
+    width: 290px;
+    height: 16px;
+}
+.other_bottom{
+    display: block;
+    background-image: url("../doc/images/item_table/other.item/bottom.png");
+    width: 290px;
+    height: 34px;
+}
+.other_title{
+    width: 290px;
+    margin: 10px 0 8px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.other_img{
+    position: absolute;
+    /* background-image: url("https://maplestory.io/api/TWMS/249/item/5062017/icon"); */
+    top: 52px;
+    left: 35px;
+    width: 40px;
+    height: 40px;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(2,2);
+    z-index: 999;
+}
+.other_text{
+    width: 290px;
+    padding: 0 20px 0 100px;
+    font-size: 12px;
+    color: white;
+    line-height:130%;
+}
+.other_table{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Arial, sans-serif !important;
+}
+.other_light{
+    position: absolute;
+    top: 35px;
+    left: 18px;
+    background-image: url("../doc/images/item_table/Item.ItemIcon.cover.png");
+    width: 74px;
+    height: 74px;
+    z-index: 999;
+}
+.job{
+    width: 262px;
+    padding: 0 6px 0 10px;
+    position: absolute;
+    top: 195px;
+    display: flex;
+}
+.zero{
+    background-image: url("../doc/images/item_table/job/Item.Equip.Job.enable.0.png");
+    position: absolute;
+    left: 19px;
+    width: 37px;
+    height: 15px;
+    /* display: none; */
+}
+.one{
+    background-image: url("../doc/images/item_table/job/Item.Equip.Job.enable.1.png");
+    position: absolute;
+    left: 65px;
+    width: 26px;
+    height: 15px;
+    /* display: none; */
+}
+.two{
+    background-image: url("../doc/images/item_table/job/Item.Equip.Job.enable.2.png");
+    position: absolute;
+    left: 101px;
+    width: 26px;
+    height: 15px;
+    /* display: none; */
+}
+.four{
+    background-image: url("../doc/images/item_table/job/Item.Equip.Job.enable.3.png");
+    position: absolute;
+    top: -1px;
+    left: 135px;
+    width: 37px;
+    height: 16px;
+    /* display: none; */
+}
+.eight{
+    background-image: url("../doc/images/item_table/job/Item.Equip.Job.enable.4.png");
+    position: absolute;
+    top: -1px;
+    left: 182px;
+    width: 26px;
+    height: 16px;
+    margin-right: 1px;
+    /* display: none; */
+}
+.sixteen{
+    background-image: url("../doc/images/item_table/job/Item.Equip.Job.enable.5.png");
+    position: absolute;
+    left: 217px;
+    width: 26px;
+    height: 15px;
+    margin: 0 3px 0 0;
+    /* display: none; */
 }
